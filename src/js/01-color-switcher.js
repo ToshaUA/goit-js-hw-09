@@ -3,6 +3,7 @@ const stopRandomBodyBackgroundColor = document.querySelector('[data-stop]');
 startRandomBodyBackgroundColor.addEventListener('click', getStart);
 stopRandomBodyBackgroundColor.addEventListener('click', getStop);
 
+let timerId = null;
 function getStart() {
   startRandomBodyBackgroundColor.setAttribute('disabled', 'true');
   stopRandomBodyBackgroundColor.removeAttribute('disabled');
