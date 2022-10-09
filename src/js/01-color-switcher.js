@@ -1,7 +1,5 @@
-const startRandomBodyBackgroundColor =
-  document.querySelector('button[data-start]');
-const stopRandomBodyBackgroundColor =
-  document.querySelector('button[data-stop]');
+const startRandomBodyBackgroundColor = document.querySelector('[data-start]');
+const stopRandomBodyBackgroundColor = document.querySelector('[data-stop]');
 startRandomBodyBackgroundColor.addEventListener('click', getStart);
 stopRandomBodyBackgroundColor.addEventListener('click', getStop);
 
