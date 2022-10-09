@@ -25,8 +25,8 @@ img {
 .field {
   padding: 5px;
   margin: 5px;
-  background: #64eb85;
-  box-shadow: 0 0 40px #64eb85;
+  background: #1bbc9b;
+  box-shadow: 0 0 40px #1bbc9b;
   color: #23252f;
   transition: background 0.5s, color 0.5s;
   border-radius: 5px;
@@ -36,18 +36,18 @@ button {
   font-size: 15px;
   text-decoration: none;
   background: #23252f;
-  color: #64eb85;
+  color: #1bbc9b;
   padding: 5px 25px;
   border-radius: 5px;
 }
 
 button:hover {
-  background: #64eb85;
-  box-shadow: 0 0 40px #64eb85;
+  background: #1bbc9b;
+  box-shadow: 0 0 40px #1bbc9b;
   color: #23252f;
   transition: background 0.5s, color 0.5s;
 }
 
 button:active {
-  box-shadow: 0 0 20px #64eb85;
+  box-shadow: 0 0 20px #1bbc9b;
 }

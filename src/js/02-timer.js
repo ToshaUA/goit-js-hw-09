@@ -2,7 +2,7 @@ import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
 import { Notify } from 'flatpickr';
 // делаем свой стиль календаря
-require('flatpickr/dist/themes/material_orange.css');
+require('flatpickr/dist/themes/material_green.css');
 
 let selectedDate = 0;
 let timerId = 0;
