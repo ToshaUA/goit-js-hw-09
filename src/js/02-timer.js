@@ -1,13 +1,12 @@
 import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
-import { Notify } from 'flatpickr';
-// делаем свой стиль календаря
+import { Notify } from 'notiflix';
 require('flatpickr/dist/themes/material_green.css');
 
 let selectedDate = 0;
 let timerId = 0;
 
-const buttonStart = document.querySelector('button[data-start]');
+const buttonStart = document.querySelector('[data-start]');
 const timeInput = document.querySelector('#datetime-picker');
 const dataDays = document.querySelector('.timer [data-days]');
 const dataHours = document.querySelector('.timer [data-hours]');
@@ -17,11 +16,9 @@ const dataSeconds = document.querySelector('.timer [data-seconds]');
 buttonStart.addEventListener('click', getButtonStart);
 buttonStart.setAttribute('disabled', 'disabled');
 
-// flatpickr
 const options = {
   enableTime: true,
   dateFormat: 'Y-m-d H:i',
-  // altInput: true,
   altFormat: 'F j, Y',
   time_24hr: true,
   defaultDate: new Date(),
@@ -47,7 +44,6 @@ function getButtonStart() {
     stopTimeOut(targetDate);
     const convertObj = convertMs(targetDate);
     showDate(convertObj);
-    //    console.log(convertObj);
   }, 1000);
 }
 function stopTimeOut(targetDates) {
@@ -75,13 +71,9 @@ function convertMs(ms) {
   const hour = minute * 60;
   const day = hour * 24;
 
-  // Remaining days
   const days = Math.floor(ms / day);
-  // Remaining hours
   const hours = Math.floor((ms % day) / hour);
-  // Remaining minutes
   const minutes = Math.floor(((ms % day) % hour) / minute);
-  // Remaining seconds
   const seconds = Math.floor((((ms % day) % hour) % minute) / second);
 
   return { days, hours, minutes, seconds };
